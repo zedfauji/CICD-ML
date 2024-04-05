@@ -7,7 +7,6 @@ on:
 
   workflow_dispatch:
 
-runs-on: self-hosted
 jobs:
   build:
     runs-on: ubuntu-latest
