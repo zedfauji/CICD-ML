@@ -1,12 +1,12 @@
 install:
-	pip3 install --upgrade pip &&\
-		pip3 install -r requirements.txt
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
 format:	
 	black *.py 
 
 train:
-	python3 train.py
+	python3.11 train.py
 
 eval:
 	echo "## Model Metrics" > report.md
@@ -24,7 +24,7 @@ update-branch:
 	git push --force origin HEAD:update
 
 hf-login: 
-	pip3 install -U "huggingface_hub[cli]"
+	pip install -U "huggingface_hub[cli]"
 	git pull origin update
 	git switch update
 	huggingface-cli login --token $(HF) --add-to-git-credential
