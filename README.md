@@ -3,3 +3,5 @@ test1
 Kick1
 bump3
 change 1
+
+change 2
